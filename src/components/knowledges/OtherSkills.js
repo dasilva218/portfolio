@@ -23,9 +23,7 @@ const OtherSkills = () => {
             <FaCheckSquare className="url" />
             Photoshop
           </li>
-        </ul>
 
-        <ul>
           <li>
             <FaCheckSquare className="url" />
             Access
@@ -42,8 +40,7 @@ const OtherSkills = () => {
             <FaCheckSquare className="url" />
             Powerpoint
           </li>
-        </ul>
-        <ul>
+
           <li>
             <FaCheckSquare className="url" />
             Git & GItHUb

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCircle, FaPlusCircle } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
 
 const Project = (props) => {
   // State

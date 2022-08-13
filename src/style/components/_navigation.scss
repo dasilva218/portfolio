@@ -1,0 +1,127 @@
+.sidebar {
+  background: radial-gradient($color-11 80%, $color-1 100%);
+  font-family: $font-1;
+  position: relative;
+  padding: 1% 0%;
+  width: 15%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas: "1" "2" "3";
+  // profil
+  div.content-profil {
+    grid-area: 1;
+    // border: 1px solid red;
+    text-align: center;
+    user-select: none;
+    position: relative;
+
+    div.content-image {
+      position: absolute;
+      bottom: 0;
+      // border: 1px solid red;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+
+      img {
+        width: 70%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 0 2px $color-3, 0 0 0 8px $color-1;
+      }
+
+      h3 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin-top: 1rem;
+        color: $color-5;
+      }
+    }
+  }
+  // navigation
+  nav.navigation {
+    grid-area: 2;
+    // padding: 2rem 1rem;
+    // border: 1px solid red;
+
+    ul {
+      // border: 1px solid red;
+      height: 100%;
+      display: grid;
+      li {
+        // border: 1px solid red;
+        padding: 1rem 0 1rem 0.4rem;
+        font-size: 1rem;
+        position: relative;
+
+        &:hover .icon {
+          transform: translate(3px, 1px);
+        }
+
+        .icon {
+          position: absolute;
+          font-size: 0.95rem;
+          transform: translateY(3px);
+          transition: 0.2s ease;
+        }
+
+        span {
+          margin-left: 1.5rem;
+        }
+
+        a {
+          color: $color-5;
+        }
+
+        .nav-active {
+          color: aliceblue;
+        }
+      }
+    }
+  }
+  // réseau sosiaux
+  div.socialNetwork {
+    // border: 1px solid red;
+    grid-area: 3;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    ul {
+      // border: 1px solid red;
+      display: flex;
+      padding: 0 14px;
+      justify-content: center;
+
+      li {
+        &:hover .ico_social {
+          color: $color-1;
+        }
+        a {
+          .ico_social {
+            color: $color-5;
+            font-size: 1.3rem;
+            transition: .5s ease;
+          }
+
+          &:visited {
+            color: $color-7;
+          }
+        }
+      }
+    }
+
+    .signature {
+      color: $color-5;
+      // border: 1px solid red;
+      display: flex;
+      justify-content: center;
+      p {
+        margin-top: 2rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

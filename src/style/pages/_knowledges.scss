@@ -1,0 +1,269 @@
+section.Knowledges {
+  // border: 1px solid red;
+
+  .KnowledgesContent {
+    // background: red;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 38% 1fr 1fr;
+    gap: 2px;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "L E E"
+      "O O H";
+
+    .experience,
+    .otherSkills,
+    .hobbies,
+    .languagesFrameworks {
+      background: radial-gradient($color-11 80%, $color-1 100%);
+      border-radius: $borderRadius;
+      padding: 0.8rem;
+      box-shadow: $shadow;
+      overflow-x: hidden;
+    }
+
+    h3 {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+      text-shadow: 0px 0px 1px $shadow;
+      // margin-top: 1rem;
+      font-family: $font-2;
+      color: $color-2;
+      text-transform: uppercase;
+    }
+    // languagesFrameworks
+    .languagesFrameworks {
+      grid-area: L;
+      overflow-y: scroll;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "l"
+        "f";
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .languageDisplay {
+        grid-area: l;
+
+        .years {
+          font-size: 0.65rem;
+          display: flex;
+          justify-content: space-between;
+          color: $white;
+
+          span {
+            width: 36%;
+            position: relative;
+            &:nth-child(2) {
+              text-align: center;
+              width: 20%;
+            }
+            &:nth-child(3) {
+              text-align: right;
+              width: 44%;
+            }
+            &:nth-child(2)::before,
+            &:nth-child(3)::before {
+              content: "";
+              background: rgba(180, 179, 179, 0.5);
+              position: absolute;
+              height: 178px;
+              width: 1px;
+              transform: translate(9px, 19px);
+            }
+          }
+        }
+      }
+
+      .frameworkDisplay {
+        grid-area: f;
+
+        h3 {
+          margin-top: 1rem;
+        }
+        .years {
+          font-size: 0.65rem;
+          display: flex;
+          justify-content: space-between;
+          color: $white;
+
+          span {
+            width: 36%;
+            position: relative;
+            &:nth-child(2) {
+              text-align: center;
+              width: 20%;
+            }
+            &:nth-child(3) {
+              text-align: right;
+              width: 44%;
+            }
+            &:nth-child(2)::before,
+            &:nth-child(3)::before {
+              content: "";
+              background: rgba(180, 179, 179, 0.5);
+              position: absolute;
+              height: 178px;
+              width: 1px;
+              transform: translate(9px, 19px);
+            }
+          }
+        }
+      }
+
+      .languagesList {
+        padding-top: -1.5rem;
+
+        ul {
+          padding-left: 0;
+          margin-top: 0.3rem;
+          margin-bottom: 0.5rem;
+          li {
+            color: $color-5;
+          }
+        }
+
+        .progressBar {
+          height: 0.4rem;
+          background: transparent;
+          border-radius: 50px;
+          margin-top: 0.2rem;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background: $color-3;
+            border-radius: 50px;
+            height: 0.4rem;
+            width: 0;
+            animation: line 2s ease-out forwards;
+
+            @keyframes line {
+              to {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    // expériences
+    .experience {
+      grid-area: E;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10% 1fr 1fr;
+      grid-template-areas: "1" "2" "3";
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      h3 {
+        grid-area: 1;
+      }
+
+      .exp-1 {
+        grid-area: 2;
+      }
+      .exp-1,
+      .exp-2 {
+        h4 {
+          font-size: 1.1rem;
+          color: $color-5;
+        }
+
+        h5 {
+          color: $color-3;
+          padding: 0.5rem 0 0.1rem 0.1rem;
+        }
+
+        p {
+          text-align: justify;
+          // padding: 0 1rem;
+          color: $white;
+        }
+      }
+      .exp-2 {
+        grid-area: 3;
+        p {
+          ul {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    // compétences autre competence
+    .otherSkills {
+      grid-area: O;
+      color: $color-4;
+      // border: 1px solid red;
+
+      .list {
+        // border: 1px solid red;
+        // display: flex;
+        // flex-flow: row nowrap;
+        // justify-content: center;
+        height: 80%;
+        // align-items: center;
+        // width: 100%;
+        /* margin: 0 auto; */
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          padding-left: 0;
+          width: 100%;
+          min-height: 100%;
+          // border: 1px solid red;
+          height: 80%;
+          display: grid;
+
+          li {
+            .url {
+              margin-right: 8%;
+              /* position: absolute; */
+              /* transform: translatex(2.2rem); */
+
+              color: $color-5;
+            }
+          }
+        }
+      }
+    }
+    // hobbies
+    .hobbies {
+      grid-area: H;
+      ul {
+        // border: 1px solid red;
+        height: 80%;
+        display: grid;
+        // flex-flow: column;
+        /* align-items: center;
+        justify-content: space-around;*/
+
+        li {
+          .i {
+            color: $color-5;
+          }
+
+          span {
+            color: $color-4;
+            position: absolute;
+            margin-left: 1%;
+            // transform: translateX(2.2rem);
+          }
+        }
+      }
+    }
+  }
+}

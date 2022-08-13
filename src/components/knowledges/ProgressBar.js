@@ -10,7 +10,7 @@ const ProgressBar = ({ languages, className, title }) => {
         <span>3 ans</span>
       </div>
 
-      <div>
+      <div className="list">
         {languages.map((item) => {
           let xpYears = 3;
           let ProgressBar = (item.xp / xpYears) * 100 + "%";

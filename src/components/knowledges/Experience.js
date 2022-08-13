@@ -5,7 +5,7 @@ const Experience = () => {
     <div className="experience">
       <h3>Expérience en entreprise</h3>
       <div className="exp-1">
-        <h4>Controleur Facturation</h4>
+        <h4>Controleur Facturation seeg</h4>
         <h5>2009-2012</h5>
         <p>
           Mise en place d’un système de contrôle sur les instances et factures
