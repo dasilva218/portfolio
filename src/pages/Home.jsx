@@ -6,7 +6,7 @@ const Home = () => {
       <div className="homeContent">
         <div className="presentation">
           <h1> IVEKE DA SILVA wilfrid</h1>
-          <h2>Développeur Back-end / Intégrateur reactjs</h2>
+          <h2>Développeur web Back-end / Intégrateur reactjs</h2>
         </div>
 
         <div className="dm content_item">

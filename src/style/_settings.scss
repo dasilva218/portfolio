@@ -6,6 +6,8 @@ $font-2: "Dosis", sans-serif;
 $font-3: "Josefin Sans", serif;
 $color-1: #040220;
 $color-11: #022c58;
+$color-bg: #031222ea;
+
 $color-2: #0518ec;
 $color-3: rgba(170, 187, 167, 0.829);
 $color-5: #36d0ea;
@@ -52,6 +54,7 @@ html {
 }
 
 body {
+  background: $color-bg;
   margin: 1rem auto;
   // border: 1px solid red;
   max-width: 1400px;

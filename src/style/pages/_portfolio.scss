@@ -1,0 +1,226 @@
+.portfolio {
+  //   background: red !important;
+  background: radial-gradient($color-11 80%, $color-1 100%);
+
+  .portfolioContent {
+    // border: 1px solid red;
+    padding: 10px 10px;
+    width: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      "1"
+      "2";
+    ul.radioDisplay {
+      grid-area: 1;
+      border-radius: $borderRadius;
+      display: flex;
+      justify-content: space-between;
+      /* width: 100%; */
+      /* padding: 0.5rem 0.5rem; */
+      background: $color-2;
+      user-select: none;
+      box-shadow: $shadow;
+      li {
+        color: $color-3;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 0 5rem;
+        /* flex: 0; */
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type="radio"] {
+          visibility: hidden;
+          position: relative;
+
+          &::before {
+            content: "";
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            height: 0.9rem;
+            width: 0.9rem;
+            border-radius: 50%;
+            border: 2px solid $color-4;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+
+          &::after {
+            content: "";
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            height: 0.9rem;
+            width: 0.9rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            background: $color-5;
+            transform: scale(0);
+            transform-origin: center;
+          }
+
+          &:checked::after {
+            transform: scale(1.17) translate(-35%, -35%);
+            top: 2px;
+            left: -6px;
+          }
+
+          &:checked + label {
+            color: $color-4;
+          }
+        }
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    .projects {
+      grid-area: 2;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      gap: 2%;
+      justify-content: space-around;
+
+      .project {
+        background: $color-2;
+        border-radius: $borderRadius;
+        /* margin: 0.5rem 0 0 0; */
+        text-align: center;
+        /* border: 1px solid red; */
+        width: 32%;
+        height: 45%;
+        /* padding: 0.3rem; */
+        box-shadow: $shadow;
+        display: grid;
+        grid-template-rows: 15% 15% 55% 15%;
+        grid-template-areas:
+          "1"
+          "2"
+          "3"
+          "4";
+
+        .icons {
+          //   border: 1px solid red;
+          grid-area: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        h3 {
+          grid-area: 2;
+          font-family: $font-2;
+          font-size: 1.5rem;
+          display: flex;
+          color: $color-11;
+          justify-content: center;
+          align-items: center;
+        }
+
+        img {
+          grid-area: 3;
+          object-fit: cover;
+          margin: 0 auto;
+          width: 95%;
+          height: 85%;
+          box-shadow: 0 2px 6px #333;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.2s;
+        }
+
+        .infos {
+          /* border: 1px solid red; */
+          grid-area: 4;
+          width: 10%;
+          margin: auto;
+          color: $color-4;
+          cursor: pointer;
+          font-size: 1.1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+
+        .showInfos {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.507);
+          animation: popup 0.3s ease forwards;
+          transform-origin: center;
+
+          .infosContent {
+            position: relative;
+            top: 25%;
+            width: 600px;
+            margin: 0 auto;
+            color: $color-5;
+            background: $color-1;
+            border-radius: $borderRadius;
+            padding: 2rem;
+            box-shadow: 0 10px 10px #333;
+            animation: popup 0.6s ease forwards;
+            transform: scale(0);
+            transform-origin: center;
+
+            @keyframes popup {
+              to {
+                transform: scale(1);
+              }
+            }
+
+            head {
+              h2 {
+                text-align: left;
+                margin-bottom: 1rem;
+              }
+            }
+
+            .text {
+              text-align: justify;
+              padding-bottom: 1rem;
+            }
+
+            .button {
+              cursor: pointer;
+              color: $color-1;
+              background: $color-5;
+              border-radius: $borderRadius;
+              padding: 1rem;
+              transition: 0.2s;
+              margin: 1rem auto;
+              width: 200px;
+
+              &:hover {
+                background: $color-4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

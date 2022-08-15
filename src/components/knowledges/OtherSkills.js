@@ -45,6 +45,11 @@ const OtherSkills = () => {
             <FaCheckSquare className="url" />
             Git & GItHUb
           </li>
+
+          <li>
+            <FaCheckSquare className="url" />
+            AdobeXD
+          </li>
         </ul>
       </div>
     </div>

@@ -3,9 +3,9 @@ import ProjectList from "../components/portfolio/ProjectList";
 
 const Portefolio = () => {
   return (
-    <div className="portfolio main_item ">
+    <section className="portfolio ">
       <ProjectList />
-    </div>
+    </section>
   );
 };
 
