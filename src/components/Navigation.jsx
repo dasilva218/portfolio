@@ -18,7 +18,7 @@ const Navigation = () => {
         <ul>
           <li>
             <NavLink
-              to="/"
+              to="/portfollio"
               className={({ isActive }) => (isActive ? "nav-active" : "")}
             >
               <FaHome className="icon" />
@@ -27,7 +27,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/competences"
+              to="/portfolio/competences"
               className={({ isActive }) => (isActive ? "nav-active" : "")}
             >
               <FaLeanpub className="icon" />
@@ -36,7 +36,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/realisations"
+              to="/portfolio/realisations"
               className={({ isActive }) => (isActive ? "nav-active" : "")}
             >
               <FaCog className="icon" />
