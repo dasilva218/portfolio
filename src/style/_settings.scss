@@ -55,7 +55,7 @@ html {
 
 body {
   background: $color-bg;
-  margin: 1rem auto;
+  margin: 1rem 1rem;
   // border: 1px solid red;
   max-width: 1400px;
   min-height: $minHeight;
@@ -80,6 +80,33 @@ body {
   section:nth-child(2) {
     width: 100%;
   }
+
+  @media screen and (max-width: 768px) {
+    section:nth-child(2) {
+      display: none;
+    }
+
+    section:nth-child(1) {
+      width: 90%;
+
+      .navigation{
+        display: none;
+      }
+
+    }
+
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    section:nth-child(2) {
+      display: none;
+    }
+
+    section:nth-child(1) {
+      display: none;
+    }
+
+  }
 }
-
-

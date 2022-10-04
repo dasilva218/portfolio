@@ -8,6 +8,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 33% 33% 33%;
   grid-template-areas: "1" "2" "3";
+
   // profil
   div.content-profil {
     grid-area: 1;
@@ -23,12 +24,17 @@
       left: 50%;
       transform: translate(-50%);
       width: 100%;
-
+      @media screen and (max-width: 768px) {
+        width: 80%;
+      }
       img {
         width: 70%;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 0 0 2px $color-3, 0 0 0 8px $color-1;
+        @media screen and (max-width: 768px) {
+          width: 50%;
+        }
       }
 
       h3 {
@@ -37,6 +43,12 @@
         letter-spacing: 0.1rem;
         margin-top: 1rem;
         color: $color-5;
+      }
+      .aff {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
       }
     }
   }
@@ -102,7 +114,7 @@
           .ico_social {
             color: $color-5;
             font-size: 1.3rem;
-            transition: .5s ease;
+            transition: 0.5s ease;
           }
 
           &:visited {

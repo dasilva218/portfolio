@@ -12,8 +12,10 @@ const Navigation = () => {
         <div className="content-image">
           <img src={photoProfil} alt="photoprofil" />
           <h3>da silva wilfrid</h3>
+          <h3 className="aff">Pour une meilleure expérience utiliser un desktop</h3>
         </div>
       </div>
+      
       <nav className="navigation">
         <ul>
           <li>

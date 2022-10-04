@@ -18,7 +18,7 @@ const Home = () => {
 
         <div className="pdf">
           <a
-            href="/media/cv_wilfrid.pdf"
+            href="portfolio/media/cv_wilfrid.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-info"
